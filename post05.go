@@ -24,7 +24,7 @@ type Userdata struct {
 	ID          int
 	Username    string
 	Name        string
-	Suname      string
+	Surname     string
 	Description string
 }
 
@@ -174,9 +174,9 @@ func ListUsers() ([]Userdata, error) {
 		var id int
 		var username string
 		var name string
-		var suname string
+		var surname string
 		var description string
-		err = rows.Scan(&id, &username, &name, &suname, &description)
+		err = rows.Scan(&id, &username, &name, &surname, &description)
 		temp := Userdata{ID: id, Username: username, Name: name, Surname: surname, Description: description}
 		Data = append(Data, temp)
 		if err != nil {
